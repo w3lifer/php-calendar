@@ -1,4 +1,4 @@
-# `php-calendar`
+# w3lifer/php-calendar
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -11,4 +11,4 @@ composer require w3lifer/php-calendar
 
 ## Usage
 
-See DocBlock of the `PhpCalendar` class itself.
+See DocBlock of the [`PhpCalendar`](https://github.com/w3lifer/php-calendar/blob/master/PhpCalendar.php) class itself.
