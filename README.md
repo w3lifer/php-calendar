@@ -1,6 +1,7 @@
 # `php-calendar`
 
 - [Installation](#installation)
+- [Usage](#usage)
 
 ## Installation
 
