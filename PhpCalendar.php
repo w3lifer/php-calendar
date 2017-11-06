@@ -94,7 +94,7 @@ use Exception;
  *     // If language exists in the `PhpCalendarI18n::$monthNames`, we can set
  *     // it here instead of `monthNames` and `weekDayAbbrs` as shown below; but
  *     // `monthName` and `weekDayAbbrs` will still have priority
- *     'language' => 'be',
+ *     'language' => 'ru',
  *     'monthNames' => [
  *         'Январь',
  *         'Февраль',
