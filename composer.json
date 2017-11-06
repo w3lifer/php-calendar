@@ -1,0 +1,23 @@
+{
+  "name": "w3lifer/php-calendar",
+  "description": "Full-featured PHP Calendar",
+  "keywords": [
+    "php",
+    "calendar"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^7"
+  },
+  "authors": [
+    {
+      "name": "Roman Grinyov",
+      "email": "w3lifer@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "w3lifer\\phpCalendar\\": ""
+    }
+  }
+}
