@@ -517,8 +517,6 @@ class PhpCalendar
 
     /**
      * Shifts week day abbreviations by number of the first day of week.
-     * It is universal method to be used when setting up `$firstDayOfWeek` and
-     * `$weekDayAbbrs`.
      * @see setFirstDayOfWeek_ByWeekDayNumber()
      * @see setFirstDayOfWeek_ByWeekDayString()
      */
@@ -564,7 +562,7 @@ class PhpCalendar
 
         $markup = '';
         for ($i = 1; $i <= $numberOfMonths; $i++) {
-            $markup .= $this->getMonthMarkup($nextMonth, $nextYear);
+            $markup .= $this->getMonthMarkup($nextYear, $nextMonth);
             $nextMonth++;
             if ($nextMonth === 13) {
                 $nextMonth = 1;
@@ -656,9 +654,9 @@ class PhpCalendar
      * @param int $year
      * @return string
      */
-    private function getMonthMarkup(int $monthNumber, int $year)
+    private function getMonthMarkup(int $year, int $monthNumber)
     {
-        $matrix = $this->getMonthMatrix($monthNumber, $year);
+        $matrix = $this->getMonthMatrix($year, $monthNumber);
 
         $monthName = $this->monthNames[$monthNumber - 1];
 
@@ -715,12 +713,14 @@ class PhpCalendar
 
     /**
      * Returns array of Unix timestamps, which represents month days.
-     * @param int $month
      * @param int $year
+     * @param int $month
      * @return array
      */
-    private function getMonthMatrix(int $month, int $year)
+    private function getMonthMatrix(int $year, int $month)
     {
+        // Initial data
+
         $firstDayTimestamp = mktime(0, 0, 0, $month, 1, $year);
 
         $matrix = [];
