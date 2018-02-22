@@ -424,8 +424,8 @@ class PhpCalendar
 
         if ($config) {
             throw new Exception(
-                'Setting unknown property: '
-                    . static::class . '::$' . array_keys($config)[0]
+                'Setting unknown property: ' .
+                    static::class . '::$' . array_keys($config)[0]
             );
         }
     }
@@ -534,6 +534,7 @@ class PhpCalendar
      * @param int|null $startYear
      * @return PhpCalendar
      * @see PhpCalendar
+     * @throws \Exception
      */
     public function get(
         int $numberOfMonths,
@@ -815,6 +816,7 @@ class PhpCalendar
      * year).
      * @param int|null $year
      * @return static
+     * @throws \Exception
      */
     public function getYear(int $year = null) : PhpCalendar
     {
