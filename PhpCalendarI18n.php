@@ -104,36 +104,60 @@ class PhpCalendarI18n
         ];
     }
 
-    public static function getMonthNames(string $language = 'en') : array
-    {
-        return
+    public static function getMonthNames(
+        string $language = 'en',
+        array $keys = []
+    ) : array {
+        $monthNames =
             isset(static::$monthNames[$language])
                 ? static::$monthNames[$language]
                 : static::$monthNames['en'];
+        if ($keys) {
+            $monthNames = array_combine($keys, $monthNames);
+        }
+        return $monthNames;
     }
 
-    public static function getWeekDayNames(string $language = 'en') : array
-    {
-        return
+    public static function getWeekDayNames(
+        string $language = 'en',
+        array $keys = []
+    ) : array {
+        $weekDayNames =
             isset(static::$weekDayNames[$language])
                 ? static::$weekDayNames[$language]
                 : static::$weekDayNames['en'];
+        if ($keys) {
+            $weekDayNames = array_combine($keys, $weekDayNames);
+        }
+        return $weekDayNames;
     }
 
-    public static function getWeekDayAbbrs2(string $language = 'en') : array
-    {
-        return
+    public static function getWeekDayAbbrs2(
+        string $language = 'en',
+        array $keys = []
+    ) : array {
+        $weekDayAbbrs2 =
             isset(static::$weekDayAbbrs2[$language])
                 ? static::$weekDayAbbrs2[$language]
                 : static::$weekDayAbbrs2['en'];
+        if ($keys) {
+            $weekDayAbbrs2 = array_combine($keys, $weekDayAbbrs2);
+        }
+        return $weekDayAbbrs2;
     }
 
-    public static function getWeekDayAbbrs3(string $language = 'en') : array
-    {
-        return
+    public static function getWeekDayAbbrs3(
+        string $language = 'en',
+        array $keys = []
+    ) : array {
+        $weekDayAbbrs3 =
             isset(static::$weekDayAbbrs3[$language])
                 ? static::$weekDayAbbrs3[$language]
                 : static::$weekDayAbbrs3['en'];
+        if ($keys) {
+            $weekDayAbbrs3 = array_combine($keys, $weekDayAbbrs3);
+        }
+        return $weekDayAbbrs3;
     }
 
     public static function getIndexedMonthNames(string $language = 'en') : array
