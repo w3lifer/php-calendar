@@ -2,9 +2,6 @@
 
 namespace w3lifer\phpCalendar;
 
-/**
- * Class PhpCalendarI18n.
- */
 class PhpCalendarI18n
 {
     protected static $monthNames = [
