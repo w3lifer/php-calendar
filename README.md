@@ -1,4 +1,4 @@
-# w3lifer/php-calendar
+# PHP Calendar
 
 - [Installation](#installation)
 - [Usage](#usage)
