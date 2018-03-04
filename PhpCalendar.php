@@ -389,6 +389,8 @@ class PhpCalendar
         if (isset($config['weekDayAbbrs'])) {
             $this->setWeekDayAbbrs($config['weekDayAbbrs']);
             unset($config['weekDayAbbrs']);
+        } else if (in_array($this->language, ['ru'])) {
+            $this->weekDayAbbrs = $this->i18n['weekDayAbbrs2'][$this->language];
         } else {
             $this->weekDayAbbrs = $this->i18n['weekDayAbbrs3'][$this->language];
         }
